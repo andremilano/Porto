@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <link rel="icon" href="assets/A.png" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- component  navbar-->
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+      <a class="text-3xl font-bold leading-none" href="#">
+        <img src="assets/A.png" alt="" class="h-10" />
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
+      >
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#jumbotron"
+            >Home</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#project"
+            >Project</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#skill"
+            >Skill</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#project"
+                >Project</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#skill"
+                >Skill</a
+              >
+            </li>
+
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>Copyright © 2023</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <!-- jumbotron -->
+    <section id="jumbotron">
+      <div class="jumbotron flex justify-center w-full">
+        <div
+          class="bg-white p-6 text-neutral-800 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30"
+        >
+          <h2 class="mb-5 text-3xl font-semibold">Hi Everyone!</h2>
+          <p>This is my personal Portfolio Website.</p>
+          <hr
+            class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30"
+          />
+          <p class="mb-4">
+            For further information about me, just email me from the email
+            address below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section>
+      <h1 class="flex justify-center text-6xl mb-1 mt-4">Profiles</h1>
+      <div class="p-6 sm:p-12 bg-white text-black flex justify-center">
+        <div
+          class="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <img
+            src="assets/Profile.jpeg"
+            alt=""
+            class="self-center flex-shrink-0 h-56 border rounded-md md:justify-self-start bg-gray-500 border-gray-700"
+          />
+          <div class="flex flex-col">
+            <h4 class="text-lg font-semibold text-center md:text-left">
+              Andre Pratama Milano
+            </h4>
+            <p class="text-black">
+              Front End Website Developer | Street & Stage Photography
+              Enthusiast
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project menu -->
+
+    <section id="project" class="bg-white mx-4 mt-10">
+      <h1 class="flex justify-center text-6xl mb-4">Project</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div
+          class="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-slate-300 rounded-lg overflow-hidden cursor-pointer"
+        >
+          <img
+            class="object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=420&q=80"
+            alt="Translator"
+          />
+
+          <div class="relative p-4">
+            <h3 class="text-base md:text-xl font-medium text-gray-800">
+              Language Translator web app
+            </h3>
+
+            <p class="mt-4 text-base md:text-lg text-gray-600">
+              Made with basic Website programming language.
+            </p>
+            <button
+              class="bg-orange-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75"
+            >
+              <a href="https://mitranslate.netlify.app/" target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-slate-300 rounded-lg overflow-hidden cursor-pointer"
+        >
+          <img
+            class="object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=420&q=80"
+            alt="Flower and sky"
+          />
+
+          <div class="relative p-4">
+            <h3 class="text-base md:text-xl font-medium text-gray-800">
+              Aspect Ratio Generator
+            </h3>
+
+            <p class="mt-4 text-base md:text-lg text-gray-600">
+              Simple aspect ratio generator with JS
+            </p>
+            <button
+              class="bg-orange-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75"
+            >
+              <a href="https://miratio.netlify.app/" target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col xl:flex-row shadow hover:shadow-md w-full bg-slate-300 rounded-lg overflow-hidden cursor-pointer"
+        >
+          <img
+            class="object-cover w-full h-48"
+            src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=420&q=80"
+            alt="Flower and sky"
+          />
+
+          <div class="relative p-4">
+            <h3 class="text-base md:text-xl font-medium text-gray-800">
+              This is card title
+            </h3>
+
+            <p class="mt-4 text-base md:text-lg text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit ad
+              assumenda.
+            </p>
+            <button
+              class="bg-orange-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75"
+            >
+              Go to lesson
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skill -->
+    <section class="mx-4 mt-10 mb-5" id="skill">
+      <h1 class="flex text-6xl justify-center mb-3">Skill & FrameWork</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div class="bg-slate-300 p-10 rounded-lg shadow-md">
+          <div class="flex flex-row">
+            <div class="flex-col">
+              <h1 class="text-xl font-bold">JavaScript</h1>
+              <div class="mt-4 mb-10">
+                <p class="text-gray-600">----Completed----</p>
+                <div
+                  class="bg-gray-400 w-64 h-3 rounded-lg mt-2 overflow-hidden"
+                >
+                  <div
+                    class="bg-pink-400 w-4/4 h-full rounded-lg shadow-md"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <img src="assets/A.png" alt="" class="h-10" />
+          </div>
+          <h3 class="text-xs uppercase">Current Capability :</h3>
+          <h2 class="tracking-wide">
+            Capable to handle problem solving using JavaScript
+            <br />
+          </h2>
+        </div>
+        <div class="bg-slate-300 p-10 rounded-lg shadow-md">
+          <h1 class="text-xl font-bold">HTML & CSS</h1>
+          <div class="mt-4 mb-10">
+            <p class="text-gray-600">----Completed----</p>
+            <div class="bg-gray-400 w-64 h-3 rounded-lg mt-2 overflow-hidden">
+              <div class="bg-pink-400 w-4/4 h-full rounded-lg shadow-md"></div>
+            </div>
+          </div>
+          <h3 class="text-xs uppercase">Current Capability :</h3>
+          <h2 class="tracking-wide">
+            Capable to make a static website using HTML and style the website
+            with vanilla CSS
+            <br />
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact me -->
+    <section id="contact">
+      <div class="sm:p-10 my-auto">
+        <section
+          class="mx-auto max-w-screen-xl md:rounded-md md:border md:shadow-lg"
+        >
+          <div class="grid grid-cols-4 text-gray-800 lg:grid-cols-3">
+            <div
+              class="col-span-4 bg-gray-50 px-8 py-10 text-gray-800 md:col-span-2 md:border-r md:px-10 md:py-12 lg:col-span-1"
+            >
+              <h2 class="mb-8 text-2xl font-black">Contact me</h2>
+              <ul>
+                <li class="mb-6 flex items-start text-left">
+                  <svg
+                    class="shrink-0 mr-6 text-2xl text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"
+                    />
+                  </svg>
+                  <div>
+                    <a
+                      class="cursor-pointer font-serif text-base md:text-lg"
+                      href="#"
+                      >andremilano16@gmail.com</a
+                    >
+                    <span class="block text-xs uppercase">email</span>
+                  </div>
+                </li>
+
+                <li class="my-6 flex items-center text-left">
+                  <svg
+                    class="shrink-0 mr-6 text-2xl text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 1024 1024"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4c0 146.8-111.8 315.9-316.1 315.9c-63 0-121.4-18.3-170.6-49.8c9 1 17.6 1.4 26.8 1.4c52 0 99.8-17.6 137.9-47.4c-48.8-1-89.8-33-103.8-77c17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35c25.1-4.7 49.1-14.1 70.5-26.7c-8.3 25.7-25.7 47.4-48.8 61.1c22.4-2.4 44-8.6 64-17.3c-15.1 22.2-34 41.9-55.7 57.6z"
+                    />
+                  </svg>
+                  <div>
+                    <a
+                      class="cursor-pointer font-serif text-base md:text-lg"
+                      href="#"
+                      >Coming Soon!</a
+                    >
+                    <span class="block text-xs uppercase">twitter</span>
+                  </div>
+                </li>
+
+                <li class="my-6 flex items-center text-left">
+                  <svg
+                    class="shrink-0 w-6 h-6 mr-6 text-gray-500 dark:text-white"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <div>
+                    <a
+                      class="cursor-pointer font-serif text-base md:text-lg"
+                      href="#"
+                      >Andre Milano</a
+                    >
+                    <span class="block text-xs uppercase">Github</span>
+                  </div>
+                </li>
+
+                <li class="my-6 flex items-center text-left">
+                  <svg
+                    class="shrink-0 mr-6 text-2xl text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838Zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388Zm-5.5 10.403h3.208V9.25H4.208v10.54ZM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/andre-pratama-milano-50458624b/"
+                    >
+                      <p class="font-serif text-base md:text-lg">
+                        Andre Pratama Milano
+                      </p>
+                    </a>
+                    <span class="block text-xs uppercase">LinkedIn</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="order-first col-span-4 max-w-screen-md px-8 py-10 md:order-last md:col-span-2 md:px-10 md:py-12"
+            >
+              <h2 class="mb-8 text-2xl font-black">Get in touch with me</h2>
+              <p class="mt-2 mb-4 font-sans text-sm tracking-normal">
+                Don't be shy to ask me a question.
+              </p>
+              <form action="">
+                <div class="md:col-gap-4 mb-5 grid md:grid-cols-2">
+                  <input
+                    class="col-span-1 w-full border-b py-3 text-sm outline-none focus:border-b-2 focus:border-black"
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                  />
+                  <input
+                    class="col-span-1 w-full border-b py-3 text-sm outline-none focus:border-b-2 focus:border-black"
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                  />
+                </div>
+                <textarea
+                  class="mb-10 w-full resize-y whitespace-pre-wrap border-b py-3 text-sm outline-none focus:border-b-2 focus:border-black"
+                  id=""
+                  rows="6"
+                  placeholder="Question"
+                  name="question"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="group flex cursor-pointer items-center rounded-xl bg-blue-600 bg-none px-8 py-4 text-center font-semibold leading-tight text-white"
+                >
+                  Not Working Yet!
+                  <svg
+                    class="group-hover:ml-8 ml-4 transition-all"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.912 12H4L2.023 4.135A.662.662 0 0 1 2 3.995c-.022-.721.772-1.221 1.46-.891L22 12L3.46 20.896c-.68.327-1.464-.159-1.46-.867a.66.66 0 0 1 .033-.186L3.5 15"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+      <div class="flex justify-center pb-4 pt-4 bg-slate-400">
+        <h1>Copyright 2023</h1>
+      </div>
+    </section>
+
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
